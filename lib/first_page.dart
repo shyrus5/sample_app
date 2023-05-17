@@ -1,31 +1,27 @@
+
+
 import 'package:flutter/material.dart';
 
-class FirstPage extends StatefulWidget {
-  const FirstPage(String string, number, {super.key});
 
+
+
+class FirstPage extends StatelessWidget {
+  
+    FirstPage(this.text, {super.key}) ;
+   String text;
   @override
-  State<FirstPage> createState() => _FirstPageState();
-}
-
-class _FirstPageState extends State<FirstPage> {
-  var nameFromHome;
-
-  @override
-  Widget build(BuildContext context) {   
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("First Page"),
+        title: const Text("First Page"),    
       ),
       body: Column(
-        children:<Widget> [
-          SizedBox(height: 30.0,
-          child: Text("$nameFromHome")
-          ),
-          
-
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Text('Entered Text :$text')
         ],
-      ),
 
-    );
+      )
+      );
   }
 }
